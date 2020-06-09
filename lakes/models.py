@@ -45,3 +45,12 @@ class Divespot(models.Model):
 
     def __str__(self):
         return self.name
+
+class Divemap(models.Model):
+    image = models.ImageField(height_field='height', width_field='width')
+    width = models.FloatField(null=True, blank=True)
+    height = models.FloatField(null=True, blank=True)
+    divespot = models.ForeignKey(
+        Divespot, on_delete=models.CASCADE
+    )
+
