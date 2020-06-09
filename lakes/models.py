@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+import autoslug
 
 # Create your models here.
 class Country(models.Model):
@@ -31,11 +32,10 @@ class Lake(models.Model):
     district = models.ForeignKey(
         District, on_delete=models.CASCADE
     )
+    slug = autoslug.AutoSlugField(populate_from='name', unique=True)
 
     def __str__(self):
         return self.name
-    def slug(self):
-        return slugify(self.name)
 
 class Divespot(models.Model):
     name = models.CharField(max_length=100)
