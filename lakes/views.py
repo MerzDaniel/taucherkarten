@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Taucherkarten")
+    context = {}
+    return render(request, 'lakes/index.html', context)
