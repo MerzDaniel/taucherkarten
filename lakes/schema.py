@@ -12,12 +12,15 @@ class StateType(DjangoObjectType):
 class LakeType(DjangoObjectType):
     class Meta:
         model = models.Lake
+    slug = graphene.String()
+    def resolve_slug(parent, info):
+        return parent.slug()
 class DistrictType(DjangoObjectType):
     class Meta:
         model = models.District
     lakes = graphene.List(LakeType)
-    def resolve_lakes(self, info):
-        return models.Lake.objects.filter(district_id=self.id)
+    def resolve_lakes(parent, info):
+        return models.Lake.objects.filter(district_id=parent.id)
 class DivespotType(DjangoObjectType):
     class Meta:
         model = models.Divespot

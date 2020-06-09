@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 class Country(models.Model):
@@ -33,6 +34,8 @@ class Lake(models.Model):
 
     def __str__(self):
         return self.name
+    def slug(self):
+        return slugify(self.name)
 
 class Divespot(models.Model):
     name = models.CharField(max_length=100)
