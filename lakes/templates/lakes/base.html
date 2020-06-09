@@ -22,7 +22,7 @@
         <bold>{{ districtName }}</bold>
         <ul>
           {% for lake in lakes %}
-          <li><a href="/see/{{ lake.slug }}">{{ lake.name }}</a></li>
+          <li><a href="{% url 'lakeBySlug' lake.slug %}">{{ lake.name }}</a></li>
           {% endfor %}
         </ul>
       {% endfor %}
