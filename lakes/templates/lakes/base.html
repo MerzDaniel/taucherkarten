@@ -18,12 +18,14 @@
 -->
   <article>
     <div id="article-nav">
-      <bold>Seen in Oberbayern</bold>
-      <ul>
-        <li><a href="/tauchen/echinger-weiher.html">Echinger Weiher</a></li>
-        <li><a href="/tauchen/langenwieder-see.html">Langenwieder See</a></li>
-        <li><a href="/tauchen/starnberger-see.html">Starnbergersee</a></li>
-      </ul>
+      {% for districtName , lakes in lakesByDistrict %}
+        <bold>{{ districtName }}</bold>
+        <ul>
+          {% for lake in lakes %}
+          <li><a href="/see/{{ lake.slug }}">{{ lake.name }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
     <div id="article-title">
       <h2>
