@@ -9,5 +9,9 @@ def index(request):
     context = { 'lakesByDistrict': lakesByDistrict }
     return render(request, 'lakes/index.html', context)
 
-def lake(request):
-    return ''
+def lake(request, lakeSlug):
+    lakesByDistrict = queries.getLakesByDistrict()
+    lake = models.Lake.objects.get(slug=lakeSlug)
+
+    context = { 'lakesByDistrict': lakesByDistrict, 'lake': lake }
+    return render(request, 'lakes/lake.html', context)
