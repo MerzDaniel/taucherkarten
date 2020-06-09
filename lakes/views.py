@@ -12,6 +12,12 @@ def index(request):
 def lake(request, lakeSlug):
     lakesByDistrict = queries.getLakesByDistrict()
     lake = models.Lake.objects.get(slug=lakeSlug)
+    divespots = models.Divespot.objects.filter(lake=lake)
 
-    context = { 'lakesByDistrict': lakesByDistrict, 'lake': lake }
+    context = { 
+        'lakesByDistrict': lakesByDistrict, 
+        'lake': lake, 
+        'divespots': divespots,
+        'divespotCount': divespots.count(),
+    }
     return render(request, 'lakes/lake.html', context)

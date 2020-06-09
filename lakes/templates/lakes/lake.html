@@ -5,5 +5,14 @@
 {% endblock %}
 
 {% block content %}
-Some nice information
+{% if divespotCount == 0 %}
+    <p>Bisher keine Einstiege gespeichert</p>
+{% elif divespotCount == 1 %}
+    <p>Single spot info</p>
+{% else %}
+    {% for divespot in divespots %}
+        <h3>{{ divespot.name }}</h3>
+        <p>Some nice information</p>
+    {% endfor %}
+{% endif %}
 {% endblock %}
