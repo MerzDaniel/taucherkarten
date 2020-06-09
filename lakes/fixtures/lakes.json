@@ -7,11 +7,26 @@
         }
     },
     {
+        "model": "lakes.country",
+        "pk": 2,
+        "fields": {
+            "name": "Österreich"
+        }
+    },
+    {
         "model": "lakes.State",
         "pk": 1,
         "fields": {
             "name": "Bayern",
             "country": 1
+        }
+    },
+    {
+        "model": "lakes.State",
+        "pk": 2,
+        "fields": {
+            "name": "Tirol",
+            "country": 2
         }
     },
     {
@@ -23,11 +38,20 @@
         }
     },
     {
+        "model": "lakes.District",
+        "pk": 2,
+        "fields": {
+            "name": "Tirol",
+            "state": 2
+        }
+    },
+    {
         "model": "lakes.Lake",
         "pk": 1,
         "fields": {
             "name": "Echinger Weiher",
-            "district": 1
+            "district": 1,
+            "slug": "echinger-weiher"
         }
     },
     {
@@ -35,7 +59,9 @@
         "pk": 2,
         "fields": {
             "name": "Langenwieder See",
-            "district": 1
+            "district": 1,
+            "slug": "langenwieder-see"
+
         }
     },
     {
@@ -43,14 +69,25 @@
         "pk": 3,
         "fields": {
             "name": "Starnbergersee",
-            "district": 1
+            "district": 1,
+            "slug": "starnbergersee"
+
+        }
+    },
+    {
+        "model": "lakes.Lake",
+        "pk": 4,
+        "fields": {
+            "name": "Plansee",
+            "district": 2,
+            "slug": "plansee"
         }
     },
     {
         "model": "lakes.Divespot",
         "pk": 1,
         "fields": {
-            "name": "Standard",
+            "name": "Echinger Weiher",
             "lake": 1
         }
     },
@@ -58,7 +95,7 @@
         "model": "lakes.Divespot",
         "pk": 2,
         "fields": {
-            "name": "Standard",
+            "name": "Langenwieder See",
             "lake": 2
         }
     },
