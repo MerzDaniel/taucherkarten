@@ -1,0 +1,81 @@
+[
+    {
+        "model": "lakes.country",
+        "pk": 1,
+        "fields": {
+            "name": "Deutschland"
+        }
+    },
+    {
+        "model": "lakes.State",
+        "pk": 1,
+        "fields": {
+            "name": "Bayern",
+            "country": 1
+        }
+    },
+    {
+        "model": "lakes.District",
+        "pk": 1,
+        "fields": {
+            "name": "Oberbayern",
+            "state": 1
+        }
+    },
+    {
+        "model": "lakes.Lake",
+        "pk": 1,
+        "fields": {
+            "name": "Echinger Weiher",
+            "district": 1
+        }
+    },
+    {
+        "model": "lakes.Lake",
+        "pk": 2,
+        "fields": {
+            "name": "Langenwieder See",
+            "district": 1
+        }
+    },
+    {
+        "model": "lakes.Lake",
+        "pk": 3,
+        "fields": {
+            "name": "Starnbergersee",
+            "district": 1
+        }
+    },
+    {
+        "model": "lakes.Divespot",
+        "pk": 1,
+        "fields": {
+            "name": "Standard",
+            "lake": 1
+        }
+    },
+    {
+        "model": "lakes.Divespot",
+        "pk": 2,
+        "fields": {
+            "name": "Standard",
+            "lake": 2
+        }
+    },
+    {
+        "model": "lakes.Divespot",
+        "pk": 3,
+        "fields": {
+            "name": "Garatshausen",
+            "lake": 3
+        }
+    },
+    {
+        "model": "lakes.Divespot",
+        "pk": 4,
+        "fields": {
+            "name": "Steg 1",
+            "lake": 3
+        }
+    }
+]

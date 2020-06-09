@@ -34,7 +34,7 @@ class Lake(models.Model):
     def __str__(self):
         return self.name
 
-class DiveSpot(models.Model):
+class Divespot(models.Model):
     name = models.CharField(max_length=100)
     lake = models.ForeignKey(
         Lake, on_delete=models.CASCADE
