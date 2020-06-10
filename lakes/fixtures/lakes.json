@@ -1,130 +1,138 @@
 [
-    {
-        "model": "lakes.country",
-        "pk": 1,
-        "fields": {
-            "name": "Deutschland"
-        }
-    },
-    {
-        "model": "lakes.country",
-        "pk": 2,
-        "fields": {
-            "name": "\u00d6sterreich"
-        }
-    },
-    {
-        "model": "lakes.state",
-        "pk": 1,
-        "fields": {
-            "name": "Bayern",
-            "country": 1
-        }
-    },
-    {
-        "model": "lakes.state",
-        "pk": 2,
-        "fields": {
-            "name": "Tirol",
-            "country": 2
-        }
-    },
-    {
-        "model": "lakes.district",
-        "pk": 1,
-        "fields": {
-            "name": "Oberbayern",
-            "state": 1
-        }
-    },
-    {
-        "model": "lakes.district",
-        "pk": 2,
-        "fields": {
-            "name": "Tirol",
-            "state": 2
-        }
-    },
-    {
-        "model": "lakes.lake",
-        "pk": 1,
-        "fields": {
-            "name": "Echinger Weiher",
-            "district": 1,
-            "slug": "echinger-weiher",
-            "url": null
-        }
-    },
-    {
-        "model": "lakes.lake",
-        "pk": 2,
-        "fields": {
-            "name": "Langenwieder See",
-            "district": 1,
-            "slug": "langenwieder-see",
-            "url": null
-        }
-    },
-    {
-        "model": "lakes.lake",
-        "pk": 3,
-        "fields": {
-            "name": "Starnbergersee",
-            "district": 1,
-            "slug": "starnbergersee",
-            "url": null
-        }
-    },
-    {
-        "model": "lakes.lake",
-        "pk": 4,
-        "fields": {
-            "name": "Plansee",
-            "district": 2,
-            "slug": "plansee",
-            "url": null
-        }
-    },
-    {
-        "model": "lakes.divespot",
-        "pk": 1,
-        "fields": {
-            "name": "Echinger Weiher",
-            "lake": 1
-        }
-    },
-    {
-        "model": "lakes.divespot",
-        "pk": 2,
-        "fields": {
-            "name": "Langenwieder See",
-            "lake": 2
-        }
-    },
-    {
-        "model": "lakes.divespot",
-        "pk": 3,
-        "fields": {
-            "name": "Garatshausen",
-            "lake": 3
-        }
-    },
-    {
-        "model": "lakes.divespot",
-        "pk": 4,
-        "fields": {
-            "name": "Steg 1",
-            "lake": 3
-        }
-    },
-    {
-        "model": "lakes.divemap",
-        "pk": 1,
-        "fields": {
-            "image": "uploaded_maps/IMAG2360_2.jpg",
-            "width": 5375.0,
-            "height": 3023.0,
-            "divespot": 3
-        }
-    }
+{
+  "model": "lakes.country",
+  "pk": 1,
+  "fields": {
+    "name": "Deutschland"
+  }
+},
+{
+  "model": "lakes.country",
+  "pk": 2,
+  "fields": {
+    "name": "\u00d6sterreich"
+  }
+},
+{
+  "model": "lakes.state",
+  "pk": 1,
+  "fields": {
+    "name": "Bayern",
+    "country": 1
+  }
+},
+{
+  "model": "lakes.state",
+  "pk": 2,
+  "fields": {
+    "name": "Tirol",
+    "country": 2
+  }
+},
+{
+  "model": "lakes.district",
+  "pk": 1,
+  "fields": {
+    "name": "Oberbayern",
+    "state": 1
+  }
+},
+{
+  "model": "lakes.district",
+  "pk": 2,
+  "fields": {
+    "name": "Tirol",
+    "state": 2
+  }
+},
+{
+  "model": "lakes.lake",
+  "pk": 1,
+  "fields": {
+    "name": "Echinger Weiher",
+    "district": 1,
+    "slug": "echinger-weiher",
+    "url": "https://echingerweiher.simdif.com/",
+    "description": "Grundwasserzufluss (ganzj\u00e4hrig 8-12\u00b0), Tageskarte 9\u20ac"
+  }
+},
+{
+  "model": "lakes.lake",
+  "pk": 2,
+  "fields": {
+    "name": "Langenwieder See",
+    "district": 1,
+    "slug": "langenwieder-see",
+    "url": "https://www.muenchen.de/rathaus/Stadtverwaltung/Referat-fuer-Gesundheit-und-Umwelt/Wasser_und_Boden/Tauchen.html",
+    "description": null
+  }
+},
+{
+  "model": "lakes.lake",
+  "pk": 3,
+  "fields": {
+    "name": "Starnbergersee",
+    "district": 1,
+    "slug": "starnbergersee",
+    "url": "https://www.starnbergersee-info.de/freizeit/tauchen/",
+    "description": null
+  }
+},
+{
+  "model": "lakes.lake",
+  "pk": 4,
+  "fields": {
+    "name": "Plansee",
+    "district": 2,
+    "slug": "plansee",
+    "url": "https://www.reutte.com/erleben/am-und-im-wasser/tauchen/plansee/",
+    "description": null
+  }
+},
+{
+  "model": "lakes.divespot",
+  "pk": 1,
+  "fields": {
+    "name": "Echinger Weiher",
+    "lake": 1,
+    "maps_url": ""
+  }
+},
+{
+  "model": "lakes.divespot",
+  "pk": 2,
+  "fields": {
+    "name": "Langenwieder See",
+    "lake": 2,
+    "maps_url": ""
+  }
+},
+{
+  "model": "lakes.divespot",
+  "pk": 3,
+  "fields": {
+    "name": "Garatshausen",
+    "lake": 3,
+    "maps_url": ""
+  }
+},
+{
+  "model": "lakes.divespot",
+  "pk": 4,
+  "fields": {
+    "name": "Steg 1",
+    "lake": 3,
+    "maps_url": ""
+  }
+},
+{
+  "model": "lakes.divemap",
+  "pk": 1,
+  "fields": {
+    "image": "uploaded_maps/IMAG2360_2.jpg",
+    "width": 5375.0,
+    "height": 3023.0,
+    "divespot": 3
+  }
+}
 ]

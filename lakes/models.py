@@ -34,6 +34,7 @@ class Lake(models.Model):
     )
     slug = autoslug.AutoSlugField(populate_from='name', unique=True)
     url = models.URLField(blank=True, null=True)
+    description = models.CharField(max_length=1000, null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -43,6 +44,7 @@ class Divespot(models.Model):
     lake = models.ForeignKey(
         Lake, on_delete=models.CASCADE
     )
+    maps_url = models.URLField()
 
     def __str__(self):
         return self.name
