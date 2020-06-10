@@ -13,11 +13,11 @@
 {% endif %}
 {% if divespotCount == 0 %}
     <p>Bisher keine Einstiege gespeichert</p>
-{% elif divespotCount == 1 %}
-    <p>Single spot info</p>
 {% else %}
     {% for divespot in divespots %}
+        {% if divespotCount > 1 %}
         <h3>{{ divespot.name }}</h3>
+        {% endif %}
         {% if divespot.maps_url %}
         <a href="{{ divespot.maps_url }}">Karte</a>
         {% endif %}
