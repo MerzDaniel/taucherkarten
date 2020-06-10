@@ -26,7 +26,10 @@
         {% for spotId, maps in divemapsByDivespot %}
         {% if spotId == divespot.pk %}
         {% for map in maps%}
+        <div id="divespot__map">
         <img src="{{ MEDIA_URL }}{{ map.image }}" width="100%"/>
+        <a href="{{ MEDIA_URL }}{{ map.image }}">Bigger image</a>
+        </div>
         {% endfor %}
         {% endif %}
         {% endfor %}
