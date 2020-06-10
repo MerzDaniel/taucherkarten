@@ -5,8 +5,11 @@
 {% endblock %}
 
 {% block content %}
+{% if lake.description %}
+<p>{{ lake.description }}</p>
+{% endif %}
 {% if lake.url %}
-<a href="{{ lake.url }}">Offizielle Seite</a>
+<a href="{{ lake.url }}">Offizielle Webseite</a>
 {% endif %}
 {% if divespotCount == 0 %}
     <p>Bisher keine Einstiege gespeichert</p>
@@ -15,7 +18,10 @@
 {% else %}
     {% for divespot in divespots %}
         <h3>{{ divespot.name }}</h3>
-        <p>Some nice information</p>
+        {% if divespot.maps_url %}
+        <a href="{{ divespot.maps_url }}">Karte</a>
+        {% endif %}
+
         <!-- Cannot access maps normally in this template lng -->
         {% for spotId, maps in divemapsByDivespot %}
         {% if spotId == divespot.pk %}
