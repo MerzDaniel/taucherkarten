@@ -13,6 +13,14 @@
     {% for divespot in divespots %}
         <h3>{{ divespot.name }}</h3>
         <p>Some nice information</p>
+        {% for spotId, maps in divemapsByDivespot %}
+        {% if spotId == divespot.pk %}
+        {% for map in maps%}
+        <img src="{{ MEDIA_URL }}{{ map.image }}" width="500px"/>
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+<!--        <img src="{{ divemapsByDivespot.divespot_pk.0.image }}"/>-->
     {% endfor %}
 {% endif %}
 {% endblock %}
