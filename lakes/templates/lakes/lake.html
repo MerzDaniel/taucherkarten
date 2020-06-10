@@ -5,6 +5,9 @@
 {% endblock %}
 
 {% block content %}
+{% if lake.url %}
+<a href="{{ lake.url }}">Offizielle Seite</a>
+{% endif %}
 {% if divespotCount == 0 %}
     <p>Bisher keine Einstiege gespeichert</p>
 {% elif divespotCount == 1 %}

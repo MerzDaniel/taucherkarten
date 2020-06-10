@@ -33,6 +33,7 @@ class Lake(models.Model):
         District, on_delete=models.CASCADE
     )
     slug = autoslug.AutoSlugField(populate_from='name', unique=True)
+    url = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.name
