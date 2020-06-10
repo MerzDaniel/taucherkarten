@@ -10,11 +10,11 @@
         "model": "lakes.country",
         "pk": 2,
         "fields": {
-            "name": "Österreich"
+            "name": "\u00d6sterreich"
         }
     },
     {
-        "model": "lakes.State",
+        "model": "lakes.state",
         "pk": 1,
         "fields": {
             "name": "Bayern",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "model": "lakes.State",
+        "model": "lakes.state",
         "pk": 2,
         "fields": {
             "name": "Tirol",
@@ -30,7 +30,7 @@
         }
     },
     {
-        "model": "lakes.District",
+        "model": "lakes.district",
         "pk": 1,
         "fields": {
             "name": "Oberbayern",
@@ -38,7 +38,7 @@
         }
     },
     {
-        "model": "lakes.District",
+        "model": "lakes.district",
         "pk": 2,
         "fields": {
             "name": "Tirol",
@@ -46,45 +46,47 @@
         }
     },
     {
-        "model": "lakes.Lake",
+        "model": "lakes.lake",
         "pk": 1,
         "fields": {
             "name": "Echinger Weiher",
             "district": 1,
-            "slug": "echinger-weiher"
+            "slug": "echinger-weiher",
+            "url": null
         }
     },
     {
-        "model": "lakes.Lake",
+        "model": "lakes.lake",
         "pk": 2,
         "fields": {
             "name": "Langenwieder See",
             "district": 1,
-            "slug": "langenwieder-see"
-
+            "slug": "langenwieder-see",
+            "url": null
         }
     },
     {
-        "model": "lakes.Lake",
+        "model": "lakes.lake",
         "pk": 3,
         "fields": {
             "name": "Starnbergersee",
             "district": 1,
-            "slug": "starnbergersee"
-
+            "slug": "starnbergersee",
+            "url": null
         }
     },
     {
-        "model": "lakes.Lake",
+        "model": "lakes.lake",
         "pk": 4,
         "fields": {
             "name": "Plansee",
             "district": 2,
-            "slug": "plansee"
+            "slug": "plansee",
+            "url": null
         }
     },
     {
-        "model": "lakes.Divespot",
+        "model": "lakes.divespot",
         "pk": 1,
         "fields": {
             "name": "Echinger Weiher",
@@ -92,7 +94,7 @@
         }
     },
     {
-        "model": "lakes.Divespot",
+        "model": "lakes.divespot",
         "pk": 2,
         "fields": {
             "name": "Langenwieder See",
@@ -100,7 +102,7 @@
         }
     },
     {
-        "model": "lakes.Divespot",
+        "model": "lakes.divespot",
         "pk": 3,
         "fields": {
             "name": "Garatshausen",
@@ -108,11 +110,21 @@
         }
     },
     {
-        "model": "lakes.Divespot",
+        "model": "lakes.divespot",
         "pk": 4,
         "fields": {
             "name": "Steg 1",
             "lake": 3
+        }
+    },
+    {
+        "model": "lakes.divemap",
+        "pk": 1,
+        "fields": {
+            "image": "uploaded_maps/IMAG2360_2.jpg",
+            "width": 5375.0,
+            "height": 3023.0,
+            "divespot": 3
         }
     }
 ]
