@@ -9,12 +9,15 @@ class CountryType(DjangoObjectType):
 class StateType(DjangoObjectType):
     class Meta:
         model = models.State
+class DivemapType(DjangoObjectType):
+    class Meta:
+        model = models.Divemap
 class LakeType(DjangoObjectType):
+    divemaps = graphene.List(DivemapType)
     class Meta:
         model = models.Lake
-    slug = graphene.String()
-    def resolve_slug(parent, info):
-        return parent.slug()
+    def resolve_divemaps(parent, info):
+        return models.Divemap.objects.filter(id=parent.id)
 class DistrictType(DjangoObjectType):
     class Meta:
         model = models.District
