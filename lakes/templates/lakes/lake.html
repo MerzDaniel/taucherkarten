@@ -13,6 +13,7 @@
     {% for divespot in divespots %}
         <h3>{{ divespot.name }}</h3>
         <p>Some nice information</p>
+        <!-- Cannot access maps normally in this template lng -->
         {% for spotId, maps in divemapsByDivespot %}
         {% if spotId == divespot.pk %}
         {% for map in maps%}
@@ -20,7 +21,6 @@
         {% endfor %}
         {% endif %}
         {% endfor %}
-<!--        <img src="{{ divemapsByDivespot.divespot_pk.0.image }}"/>-->
     {% endfor %}
 {% endif %}
 {% endblock %}
