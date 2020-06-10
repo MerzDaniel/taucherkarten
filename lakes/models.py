@@ -47,7 +47,10 @@ class Divespot(models.Model):
         return self.name
 
 class Divemap(models.Model):
-    image = models.ImageField(height_field='height', width_field='width')
+    image = models.ImageField(
+        height_field='height', width_field='width'
+        , upload_to='uploaded_maps/'
+        )
     width = models.FloatField(null=True, blank=True)
     height = models.FloatField(null=True, blank=True)
     divespot = models.ForeignKey(
