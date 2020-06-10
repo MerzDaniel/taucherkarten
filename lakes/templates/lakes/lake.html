@@ -16,7 +16,7 @@
         {% for spotId, maps in divemapsByDivespot %}
         {% if spotId == divespot.pk %}
         {% for map in maps%}
-        <img src="{{ MEDIA_URL }}{{ map.image }}" width="500px"/>
+        <img src="{{ MEDIA_URL }}{{ map.image }}" width="100%"/>
         {% endfor %}
         {% endif %}
         {% endfor %}
