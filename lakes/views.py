@@ -36,3 +36,10 @@ def impressum(request):
         'lakesByDistrict': lakesByDistrict, 
     }
     return render(request, 'lakes/impressum.html', context)
+
+def dataProtection(request):
+    lakesByDistrict = queries.getLakesByDistrict()
+    context = { 
+        'lakesByDistrict': lakesByDistrict, 
+    }
+    return render(request, 'lakes/data-protection.html', context)
