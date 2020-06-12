@@ -29,3 +29,10 @@ def lake(request, lakeSlug):
     }
 
     return render(request, 'lakes/lake.html', context)
+
+def impressum(request):
+    lakesByDistrict = queries.getLakesByDistrict()
+    context = { 
+        'lakesByDistrict': lakesByDistrict, 
+    }
+    return render(request, 'lakes/impressum.html', context)
