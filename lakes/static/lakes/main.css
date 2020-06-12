@@ -26,6 +26,9 @@ footer {
  margin-top: auto;
  padding: 0.5em;
 }
+footer > a {
+  padding: 0 0.25em;
+}
 
 a {
  color: #AAAE7F; /* 2 */

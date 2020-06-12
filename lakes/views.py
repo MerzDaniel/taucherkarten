@@ -43,3 +43,10 @@ def dataProtection(request):
         'lakesByDistrict': lakesByDistrict, 
     }
     return render(request, 'lakes/data-protection.html', context)
+
+def nerdArea(request):
+    lakesByDistrict = queries.getLakesByDistrict()
+    context = { 
+        'lakesByDistrict': lakesByDistrict, 
+    }
+    return render(request, 'lakes/nerd-area.html', context)
