@@ -17,7 +17,7 @@ class LakeType(DjangoObjectType):
     class Meta:
         model = models.Lake
     def resolve_divemaps(parent, info):
-        return models.Divemap.objects.filter(id=parent.id)
+        return models.Divemap.objects.filter(divespot__lake__id=parent.id)
 class DistrictType(DjangoObjectType):
     class Meta:
         model = models.District
