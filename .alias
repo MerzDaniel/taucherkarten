@@ -1,0 +1,11 @@
+alias al="vim .alias && . .alias && echo sourced .alias"
+
+alias env='if [ -z ${VIRTUAL_ENV+x} ]; then . env/bin/activate; fi'
+alias envD='deactivate'
+alias reset-db="env && rm lakes/migrations/0001_initial.py db.sqlite3 &&
+./manage.py makemigrations &&
+./manage.py migrate &&
+./manage.py loaddata lake &&
+./manage.py createsuperuser"
+alias dev-server='env && ./manage.py runserver'
+
