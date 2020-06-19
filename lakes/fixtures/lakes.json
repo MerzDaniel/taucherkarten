@@ -95,7 +95,7 @@
   "fields": {
     "name": "Echinger Weiher",
     "lake": 1,
-    "maps_url": ""
+    "maps_url": "https://www.google.de/maps/place/48%C2%B018'54.3%22N+11%C2%B036'56.0%22E/@48.315082,11.6150018,171m/data=!3m2!1e3!4b1!4m14!1m7!3m6!1s0x479e6e746cd1c229:0xd6553cf9bf56e794!2sEchinger+Weiher!3b1!8m2!3d4"
   }
 },
 {
@@ -104,7 +104,7 @@
   "fields": {
     "name": "Langenwieder See",
     "lake": 2,
-    "maps_url": ""
+    "maps_url": "https://www.google.de/maps/place/47%C2%B057'57.3%22N+11%C2%B019'20.6%22E/@47.9659388,11.3223748,43m/data=!3m1!1e3!4m13!1m6!3m5!1s0x479dcfacce547b83:0xdfd664078874ec45!2sSteg+1+Kiosk!8m2!3d47.9660578!4"
   }
 },
 {
@@ -113,7 +113,7 @@
   "fields": {
     "name": "Garatshausen",
     "lake": 3,
-    "maps_url": ""
+    "maps_url": "https://www.google.de/maps/place/47%C2%B055'09.2%22N+11%C2%B017'26.8%22E/@47.919223,11.2902268,172m/data=!3m2!1e3!4b1!4m14!1m7!3m6!1s0x479dc931b008dbcf:0x261e48aecf88b721!2sGaratshausen,+82340+Feldafi"
   }
 },
 {
@@ -122,7 +122,7 @@
   "fields": {
     "name": "Steg 1",
     "lake": 3,
-    "maps_url": ""
+    "maps_url": "https://www.google.de/maps/place/47%C2%B057'57.3%22N+11%C2%B019'20.6%22E/@47.9659388,11.3223748,43m/data=!3m1!1e3!4m13!1m6!3m5!1s0x479dcfacce547b83:0xdfd664078874ec45!2sSteg+1+Kiosk!8m2!3d47.9660578!4"
   }
 },
 {
