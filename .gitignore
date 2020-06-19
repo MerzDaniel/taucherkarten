@@ -2,3 +2,4 @@ __pycache__
 objectdb
 uploaded_maps
 .env
+.envPROD
