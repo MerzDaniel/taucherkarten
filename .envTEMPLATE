@@ -1,0 +1,8 @@
+
+DB_USER=user
+DB_PASSWORD=asdf
+SECRET_KEY=nb1+6h864#=b1c8a5*hacg0kv#_zxaixt449!32n2n+r1+9qtk
+DEBUG=True
+ALLOWED_HOST='localhost'
+CSRF_COOKIE_SECURE=False
+SESSION_COOKIE_SECURE=False
