@@ -86,6 +86,7 @@ DATABASES = {
         'NAME': 'divemaps',
         'USER': env('DB_USER'),
         'PASSWORD': env('DB_PASSWORD'),
+        'PORT': env('DB_PORT'),
         'default-character-set': 'utf8',
         'sql_mode': 'STRICT_TRANS_TABLES',
     }
