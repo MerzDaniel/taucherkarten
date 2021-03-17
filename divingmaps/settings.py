@@ -83,9 +83,10 @@ WSGI_APPLICATION = 'divingmaps.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'divemaps',
-        'USER': env('DB_USER'),
-        'PASSWORD': env('DB_PASSWORD'),
+        'NAME': env('MYSQL_DATABASE'),
+        'USER': env('MYSQL_USER'),
+        'PASSWORD': env('MYSQL_PASSWORD'),
+        'HOST': env('DB_HOST'),
         'PORT': env('DB_PORT'),
         'default-character-set': 'utf8',
         'sql_mode': 'STRICT_TRANS_TABLES',
