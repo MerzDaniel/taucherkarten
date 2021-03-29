@@ -4,14 +4,26 @@
 ## Actual setup doc
 - install python3 with dev
     - `sudo apt install python3 python3-dev`
+- setup venv `python3 -m virtualenv venv`
+- activate venv `source venv/bin/activate`
+- install deps `python3 -m pip install -r requirements.txt`
+    - (it could be that mod_wsgi needs to be installed globally. It is needed for the server startup)
+- startup DB `docker-compose up -d`
+- db migrations 
+- load initial data `python manage.py loaddata lakes`
+- start server `python manage.py runserver`
+
+### Various stuff
+- Make devserver reachable from other computer `python manage.py runserver 0.0.0.0:8000`
+
+### Mysql db 
+If you'd like to setup DB locally (not in docker):
+
 - install mariadb database
     - `sudo apt install mariadb-server`
     - you should secure the installation by password etc:
     - `sudo mysql_secure_installation`
     - ... TODO permissions for user
-- setup venv `python3 -m virtualenv venv`
-- activate venv `source venv/bin/activate`
-- install deps `python3 -m pip install -r requirements.txt`
 
 ## Obscure setup doc
 - start mysql
