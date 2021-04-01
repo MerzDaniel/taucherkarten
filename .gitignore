@@ -5,3 +5,4 @@ uploaded_maps
 .envPROD
 svc
 
+db.sqlite3
