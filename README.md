@@ -9,7 +9,8 @@
 - install deps `python3 -m pip install -r requirements.txt`
     - (it could be that mod_wsgi needs to be installed globally. It is needed for the server startup)
 - startup DB `docker-compose up -d`
-- db migrations 
+- setup your .env with the local configuration `cp TEMPLATE.env .env`
+- db migrations `python manage.py migrate`
 - load initial data `python manage.py loaddata lakes`
 - start server `python manage.py runserver`
 
@@ -24,6 +25,16 @@ If you'd like to setup DB locally (not in docker):
     - you should secure the installation by password etc:
     - `sudo mysql_secure_installation`
     - ... TODO permissions for user
+
+------------------    
+## Deployment
+- clone, correct config, setup own db
+- apache create `./sites-available/taucherkarten.de.conf`
+- do wsgi daemon stuff
+- `sudo apt-get install libapache2-mod-wsgi-py3`
+- use wsg_prod to load env from virtualenv
+- fix more problems
+------------------    
 
 ## Obscure setup doc
 - start mysql
