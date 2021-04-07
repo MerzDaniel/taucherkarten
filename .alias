@@ -1,6 +1,6 @@
 alias lal="vim .alias && . .alias && echo sourced .alias"
 
-alias m='python3 manage.py'
+alias m='python manage.py'
 alias venv='if [ -z ${VIRTUAL_ENV+x} ]; then . venv/bin/activate; fi'
 alias reset-db="env && rm lakes/migrations/0001_initial.py db.sqlite3 &&
 ./manage.py makemigrations &&
