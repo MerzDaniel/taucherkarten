@@ -129,7 +129,7 @@
   "model": "lakes.divemap",
   "pk": 1,
   "fields": {
-    "image": "uploaded_maps/IMAG2360_2.jpg",
+    "image": "uploaded_maps/garatshausen.jpg",
     "width": 5375.0,
     "height": 3023.0,
     "divespot": 3
