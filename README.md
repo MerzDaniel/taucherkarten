@@ -1,5 +1,23 @@
 # Taucher karten 
 
+## Lage page PLAN
+main data:
+- (Picture)
+- Map (openstreet)
+    - location
+    - deepness
+    - POIs
+- Info
+    - 
+- Links
+    - Wikipedia
+    - seen.de
+    - taucher info
+    - https://tauchplatzkarten.de/shop (Kooperation)
+    
+### Divespot
+- Description
+- Map
 
 ## Actual setup doc
 - install python3 with dev
